@@ -1,0 +1,29 @@
+﻿<Window x:Class="FilmGise.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FilmGise"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+
+
+
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="Dg"  Margin="0,0,0,69" SelectionChanged="Dg_SelectionChanged_2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="KOLTUK NUMARASI" Binding="{Binding KoltukNum}"></DataGridTextColumn>
+                <DataGridTextColumn Header= "FİYAT" Binding="{Binding fiyat}"></DataGridTextColumn>
+                <DataGridTextColumn Header= "DURUM" Binding="{Binding Durum}"></DataGridTextColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Ogr" Content="Öğrenci" HorizontalAlignment="Left" Width="400" Margin="0,365,0,0" Click="Button_Click"/>
+        <Button x:Name="Nrml" Content="Normal" HorizontalAlignment="Left" Width="382" Margin="418,365,0,0" Click="Nrml_Click"/>
+
+    </Grid>
+</Window>
