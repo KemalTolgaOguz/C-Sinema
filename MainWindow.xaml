@@ -22,9 +22,9 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="Ogr" Content="Öğrenci" HorizontalAlignment="Left" Width="182" Margin="0,365,0,0" Click="Button_Click"/>
-        <Button x:Name="Nrml" Content="Normal" HorizontalAlignment="Left" Width="160" Margin="640,365,0,0" Click="Nrml_Click"/>
-        <Button x:Name="Iptal"  Content="İptal" HorizontalAlignment="Center" Margin="0,365,0,0" VerticalAlignment="Top" Height="69" Width="194" Click="Iptal_Click"/>
+        <Button x:Name="Ogr" Content="Öğrenci" HorizontalAlignment="Left" Width="303" Margin="0,365,0,0" Click="Button_Click"/>
+        <Button x:Name="Nrml" Content="Normal" HorizontalAlignment="Left" Width="303" Margin="497,365,0,0" Click="Nrml_Click"/>
+        <Button x:Name="Iptal"  Content="İptal" HorizontalAlignment="Center" Margin="0,365,0,0" VerticalAlignment="Top" Height="70" Width="194" Click="Iptal_Click"/>
 
     </Grid>
 </Window>
