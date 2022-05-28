@@ -51,7 +51,7 @@ namespace FilmGise
                 var KoltukData = (Dg.SelectedItem as Koltuk);
                 KoltukData.Durum = "Dolu";
                 var OgrFiyat = KoltukData.fiyat / 3*2;
-                MessageBox.Show($"Öğrenci Bileti Satıldı {OgrFiyat} TL Tahsil Ediniz.");
+                MessageBox.Show($"Öğrenci Bileti Satıldı {OgrFiyat} TL");
                 var index = KoltukData.KoltukNum;
                 Koltuk yeni = new Koltuk();
                 yeni.KoltukNum = KoltukData.KoltukNum;
@@ -79,6 +79,7 @@ namespace FilmGise
                 var KoltukData = (Dg.SelectedItem as Koltuk);
                 Ogr.Content = $"{KoltukData.KoltukNum.ToString()}  NUMARALI KOLTUĞU ÖĞRENCİ FİYATIYLA AL";
                 Nrml.Content = $"{KoltukData.KoltukNum.ToString()}  NUMARALI KOLTUĞU NORMAL FİYATLA AL";
+                Iptal.Content = $"{KoltukData.KoltukNum.ToString()}  NUMARALI KOLTUĞU İPTAL ET";
 
 
 
@@ -94,12 +95,38 @@ namespace FilmGise
                 var KoltukData = (Dg.SelectedItem as Koltuk);
                 KoltukData.Durum = "Dolu";
                 var OgrFiyat = KoltukData.fiyat;
-                MessageBox.Show($"Bilet Başarıyla Satıldı {OgrFiyat} TL Tahsil Ediniz.");
+                MessageBox.Show($"Bilet Başarıyla Satıldı {OgrFiyat} TL");
                 var index = KoltukData.KoltukNum;
                 Koltuk yeni = new Koltuk();
                 yeni.KoltukNum = KoltukData.KoltukNum;
                 yeni.Durum = "Dolu";
                 yeni.fiyat = 30;
+
+
+
+                Dg.ItemsSource = Koltuklar;
+
+
+
+
+
+            }
+        }
+
+        private void Iptal_Click(object sender, RoutedEventArgs e)
+        {
+            object item = Dg.SelectedItem;
+            if (item != null)
+            {
+                var KoltukData = (Dg.SelectedItem as Koltuk);
+                KoltukData.Durum = "Boş";
+                var OgrFiyat = KoltukData.fiyat;
+                MessageBox.Show($"Bilet Başarıyla İptal Edildi");
+                var index = KoltukData.KoltukNum;
+                Koltuk yeni = new Koltuk();
+                yeni.KoltukNum = KoltukData.KoltukNum;
+                yeni.Durum = "Boş";
+                
 
 
 
